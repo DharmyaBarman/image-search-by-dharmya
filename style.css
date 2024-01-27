@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%
+}
+.bg-img{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: grey;
+}
+.container .container-main{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    position: relative;
+}
+.container-main-head h1{
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    word-spacing: 2rem;
+    color: #e2ebf0;
+    letter-spacing: 0.2rem;
+    font-family: 'Rubik Glitch Pop', system-ui;
+}
+.container-main-head p{
+    float: right;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: gainsboro;
+}
+.container-main input{
+    width: 60rem;
+    height: 5rem;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.container-main input:focus{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 20px;
+}
+.container-main button{
+    outline: none;
+    border: none;
+    margin-left: 3rem;
+    border-radius: 50%;
+}
+.container-main button i{
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    bottom: 28%;
+    color: grey;
+    background-color: white;
+}
+.container-main button i:active{
+    font-size: 2.3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 20px;
+}
+.image-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.image-container img{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease-in-out;
+    object-fit: fill;
+    width: 40rem;
+    height: 40rem;
+}
+.loadmore{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 10rem;
+    padding-bottom: 10rem;
+}
+.loadmore>button{
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    font-weight: 700;
+    color: grey;
+    outline: none;
+    border-radius: 1rem;
+}
+.loadmore>button:active,
+.image-container img:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 20px;
+}
+
+@media (width <= 80rem) {
+    .container-main-head h1{
+        font-size: 5rem;
+    }
+    .container-main input{
+        width: 50rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+    .container-main button i{
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        bottom: 30.5%;
+    }
+    .image-container img{
+        width: 50rem;
+    }
+}
+@media (width <= 70rem) {
+    .image-container img{
+        width: 60rem;
+    }
+}
+@media (width <= 36rem) {
+    .container-main-head h1{
+        font-size: 4rem;
+    }
+    .container-main input{
+        width: 25rem;
+        height: 3rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    .container-main button i{
+        font-size: 1rem;
+        padding: 1rem;
+        bottom: 34%;
+    }
+    .image-container img{
+        width: 30rem;
+    }
+}
+
+.container-main-head h1,
+.container-main input,
+.container-main button i,
+.image-container img{
+    transition: all 0.5s ease;
+}
+
+/* for display none  */
+#load{
+    display: none;
+}
